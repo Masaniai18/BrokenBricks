@@ -15,12 +15,17 @@ def setup():
 def draw():
     background(0)
     global xCoord, yCoord, yspeed, speed, ellipS
-    leftTopBoundary = ellipS / 2
-    rightBoundaryBottomBoundary = 400 - ellipS / 2
-    topBoundary = 85
-    if xCoord >= rightBoundary bottomBoundary or xCoord <= leftBoundarym topBoundary:
+    leftBoundary = ellipS / 2
+    rightBoundary = 400 - ellipS / 2
+    topBoundary = ellipS / 2
+    bottomBoundary = 400 - ellipS / 2
+    brickBoundary = rHeight
+    
+    if rxCoord >= brickBoundary or xCoord <= brickBoundary:
         speed = -speed
-    if yCoord >= rightBoundary bottomBoundary or yCoord <= leftBoundary topBoundary:
+    if xCoord >=  bottomBoundary <= xCoord or xCoord <= topBoundary:
+        speed = -speed
+    if yCoord >= rightBoundary or yCoord <= leftBoundary:
         yspeed = -yspeed
     xCoord += speed
     yCoord += yspeed
