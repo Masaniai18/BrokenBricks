@@ -29,37 +29,38 @@ def draw():
         yspeed = -yspeed
     if xCoord >= rightBoundary or xCoord <= leftBoundary:
         speed = -speed
-    xCoord += speed
-    yCoord += yspeed
+    if xCoord >= mouseX or xCoord <= mouseX or yCoord >= mouseX or yCoord <= mouseX:
+        xCoord += speed
+        yCoord += yspeed
     fill(255,255,0)
     ellipse(xCoord,yCoord,ellipS,ellipS)          # Ball
     
-    bb1 =
-    bb2 =
-    bb3 =
-    bb4 =
+    bb1 = ()
+    bb2 = ()
+    bb3 = ()
+    bb4 = ()
     
-    global bb1,bb2,bb3,bb4
+    bb1,bb2,bb3,bb4
     
-    global 
+    #global
     if insidebrick1:
         fill(0)
     else:
         fill(255)
     rect(rxCoord,ryCoord,rWidth,rHeight)                # 1 brick 
-    global
+    #global
     if insidebrick2:
         fill(0)
     else:
         fill(255)
     rect(rxCoord+100,ryCoord,rWidth,rHeight)            # 2 brick
-    global
+    #global
     if insidebrick3:
         fill(0)
     else: 
         fill(255)
     rect(rxCoord+200,ryCoord,rWidth,rHeight)            # 3 brick 
-    global
+    #global
     if insidebrick4:
         fill(0)
     else:
@@ -67,13 +68,11 @@ def draw():
     rect(rxCoord+300,ryCoord,rWidth,rHeight)            # 4 brick 
     
     #rect(rxCoord,ryCoord,rWidth,rHeight)                # 1 brick 
-   # rect(rxCoord+100,ryCoord,rWidth,rHeight)            # 2 brick
+    #rect(rxCoord+100,ryCoord,rWidth,rHeight)            # 2 brick
     #rect(rxCoord+200,ryCoord,rWidth,rHeight)            # 3 brick 
     #rect(rxCoord+300,ryCoord,rWidth,rHeight)            # 4 brick 
     rect(rxCoord-150,ryCoord+100,rWidth-50,rHeight-10)  # Paddle 
 
-
-    if xCoord >= mouseX or xCoord <= mouseX:
         
-        fill(255)
+    fill(255)
     rect(mouseX,375,rWidth-50,rHeight-10)               # Paddle follows mouse
